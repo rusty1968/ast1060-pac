@@ -1,1 +1,2 @@
+PROVIDE(UART = DefaultHandler);
 
