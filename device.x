@@ -1,2 +1,1 @@
-PROVIDE(UART = DefaultHandler);
 
