@@ -40,10 +40,10 @@ permissions and limitations under the License.
 
 	<peripherals>
 		<peripheral>
-			<name>UART</name>
+			<name>UART1</name>
 			<baseAddress>0x40000000</baseAddress>
   			<interrupt>
-                <name>UART</name>
+                <name>UART1</name>
                 <value>5</value> <!-- Interrupt number for UART -->
             </interrupt>			
 			<registers>
@@ -121,6 +121,91 @@ permissions and limitations under the License.
 				</register>
 			</registers>
 		</peripheral>	
+
+		<peripheral>	
+
+			<name>UART2</name>
+			<baseAddress>0x50000000</baseAddress>
+  			<interrupt>
+                <name>UART2</name>
+                <value>7</value> <!-- Interrupt number for UART -->
+            </interrupt>			
+			<registers>
+				<register>
+					<name>RBR</name>
+					<description>Receiving Buffer Register</description>
+					<addressOffset>0x00</addressOffset>
+					<access>read-only</access>
+				</register>
+				<register>
+					<name>THR</name>
+					<description>Transmit Holding Register</description>
+					<addressOffset>0x00</addressOffset>
+					<access>write-only</access>
+				</register>
+				<register>
+					<name>IER</name>
+					<description>Interrupt Enable Register</description>
+					<addressOffset>0x04</addressOffset>
+					<access>read-write</access>
+				</register>
+				<register>
+					<name>IIR</name>
+					<description>Interrupt Identity Register</description>
+					<addressOffset>0x08</addressOffset>
+					<access>read-only</access>
+				</register>
+				<register>
+					<name>FCR</name>
+					<description>FIFO Control Register</description>
+					<addressOffset>0x0C</addressOffset>
+					<access>write-only</access>
+				</register>
+				<register>
+					<name>LCR</name>
+					<description>Line Control Register</description>
+					<addressOffset>0x10</addressOffset>
+					<access>read-write</access>
+				</register>
+				<register>
+					<name>MCR</name>
+					<description>Modem Control Register</description>
+					<addressOffset>0x14</addressOffset>
+					<access>read-write</access>
+				</register>
+				<register>
+					<name>LSR</name>
+					<description>Line Status Register</description>
+					<addressOffset>0x18</addressOffset>
+					<access>read-only</access>
+				</register>
+				<register>
+					<name>MSR</name>
+					<description>Modem Status Register</description>
+					<addressOffset>0x1C</addressOffset>
+					<access>read-only</access>
+				</register>
+				<register>
+					<name>SCR</name>
+					<description>Scratch Register</description>
+					<addressOffset>0x20</addressOffset>
+					<access>read-write</access>
+				</register>
+				<register>
+					<name>DLL</name>
+					<description>Divisor Latch Low Register</description>
+					<addressOffset>0x04</addressOffset>
+					<access>read-write</access>
+				</register>
+				<register>
+					<name>DLH</name>
+					<description>Divisor Latch High Register</description>
+					<addressOffset>0x08</addressOffset>
+					<access>read-write</access>
+				</register>
+			</registers>
+		</peripheral>	
+
    	    <peripheral>
 		<name>HACE</name>
 		<baseAddress>0x7E6D0000</baseAddress>
